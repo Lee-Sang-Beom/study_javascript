@@ -1,0 +1,22 @@
+변수 만들기
+ - let 키워드 사용 (ES6에서 추가)
+ - var 키워 드도 있음
+
+var을 사용하면 안되는 이유
+ - var hoisting : 어디에 선언했냐에 상관없이 항상 제일 위로 선언을 끌어 올려주는것
+ - var는 block scope임. 블록의 개념을 무시함
+
+상수 사용 >> const MAX = 100; // 상수개념 : Inmutable 
+  - 왜 사용하는가?  보안, 실수방지
+
+Inmutable data type : 데이터 자체를 변경 불가 > primitive types, frozenn objects
+mutable data type : 변경가능 object(예로 배열) > 스스로 변경이 가능
+
+변수 타입 종류
+ - number, string, boolean, null, undefine, symbol, object, box container
+ - function(데이터 타입 중 하나로 취급), 
+   first-class function (function도 다른 데이터 타입처럼 변수에 할당이 가능하고, 
+                         그렇기에 함수의 파라미터로 인자로도 전달이 가능하고, 
+                         리턴 타입으로 함수를 리턴가능)
+                         
+ - let a = 12; (let a : number= 12; 와 동일.)
