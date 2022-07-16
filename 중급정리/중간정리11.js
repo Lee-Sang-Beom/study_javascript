@@ -1,25 +1,29 @@
 'use strict'
 
 // callback : 어떤 일이 완료된 이후 실행되는 함수를 콜백 함수라 함.
-
 // new promise생성자가 반환하는 promise 객체는 state와 result를 프로퍼티로 받는다.
-
-//초기 state는 pending(대기), result는 undefined
-
-// 성공 시 :  resolve가 호출되면 (성공하면) state : fulfilled 가 되며, result :  resolve로 전달한 값이 부여
+// 초기 state는 pending(대기), result는 undefined
+// 성공 시 : resolve가 호출되면 (성공하면) state : fulfilled 가 되며, result :  resolve로 전달한 값이 부여
 // 실패 시 : state : rejected 거부됨,  result : error
 
 
 const pr = new Promise((resolve, reject) => {
     setTimeout(()=>{
-        //resolve('ok'); //3초후에 state : fulfilled, result : ok
-        reject(new Error('error')); // 3초 이후, rejected, result : error
+        // resolve('send a state'); //3초후에 state : fulfilled, result : ok
+        reject(new Error('error가 발생')); // 3초 이후, rejected, result : error
     },2000)
 })
 
-pr.then(function(result){
-  console.log(result);
-}).catch((error) => console.log(error)).finally(()=>console.log("끝"));
+// customer는 then, finally, catch등으로 데이터 받아와서 원하는 기능을 수행하는 콜백함수 사용
+// pr.then(value => {console.log(value)})
+
+pr.then(function (result) {
+  console.log(`${result} 전달되었습니다`);
+})
+  .catch((error) => console.log(error)) // 실패했을 때 
+  .finally(() => console.log("끝")); // 성공이든 실패든 항상 출력됨
+
+
 
 // Promise.all([f1(),f2(),f3()]).then((res)=>console.log(res));
 // 위의 내용은 then이 3개의 배열 내 전달된 함수가 다 끝나여, res를 출력함
