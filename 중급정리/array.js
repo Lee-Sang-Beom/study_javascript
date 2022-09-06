@@ -1,14 +1,14 @@
 {
     // 1. join() : 배열 원소를 string으로 반환. (구분자 존재)
-    // const fruits = ['apple', 'banana', 'orange'];
-    // const result = fruits.join(' + '); 
-    // console.log(result);
+    const fruits = ['apple', 'banana', 'orange'];
+    const result = fruits.join(' + '); 
+    console.log(result);
 }
 
 {
     // 2. split() : string을 배열로 반환. (구분자를 기준으로)
     // const fruits = `apple-banana-orange`;
-    // const result = fruits.split(`-`, 2); // 2번째 파라미터 limit을 넣으면, 앞 2개만 반환
+    // const result = fruits.split(`-`,2); // 2번째 파라미터 limit을 넣으면, 앞 2개만 반환
     // console.log(result);
 }
 
@@ -22,12 +22,12 @@
 {
     // 4. splice(a,b) : index a~b의 원소를 삭제함. 그리고 삭제된걸 반환 (원래배열에도 적용)
     // const arr = [1,2,3,4,5];
-    // const result = arr.splice(2,4); // 원래배열은 index 2~4가 빠짐
+    // const result = arr.splice(2,4); // 원래배열은 index 2,3,4가 빠짐(마지막것도 포함)
     // console.log(result, arr);
 
     // 5. slice(a,b) : index a~b의 원소를 원래배열 영향없이 잘라서 가져옴
     // const arr= [1,2,3,4,5];
-    // const result = arr.slice(2,4);
+    // const result = arr.slice(2,4); // 마지막 4번째 인덱스 미포함
     // console.log(result,arr);    
 }
 
@@ -54,7 +54,7 @@
     // console.log(result);
 
     // 7. filter() : 배열 전체를 돌며, 특정 값을 포함하는 배열요소를 '모두'가져옴. 위 find는 최초1개만 받아옴
-    // const result = students.filter((student)=>student.enrolled);
+    // const result = students.filter((student)=> student.enrolled);
     // console.log(result);
 
     // 8. map() : 배열 내 요소 하나하나를 보고, 그 요소값을 새로운 값으로 변환하기 위한 방법을 고려할 때 사용
@@ -76,7 +76,7 @@
     // 11. reduce() : 배열 내 모든 값을 확인하면서, 누적된 결과값을 리턴할 때 사용, reduceRight()는 방향이 반대로
     // const result = students.reduce((prev, curr)=>{ 
     //     return prev + curr.score; // 0 + 45 > 45 + 80 > 125 + 90 = 215 
-    // },0) // initial 값이 0으로 시작. (0부터 시작함)
+    // },0) // initial(prev) 값이 0으로 시작. (0부터 시작함)
     // console.log(result);
 
     // 12. quiz : 점수를 반환하고, 50점이상인 점수만 그걸 문자열로 합치기
@@ -85,12 +85,13 @@
     //   .filter((student) => student >= 50)
     //   .join(" -> ");
     // console.log(result);
+ 
 
     // 13. sort() : 학생 점수를 정렬한 후, string으로 변환
-    const result = students
-      .map((student) => student.score)
-      .sort((a, b) => b - a) // 두개가 전달되는데, b-a처럼하면 내림차순
-      .join("-"); // 문자열로
-    console.log(result);
+    // const result = students
+    //   .map((student) => student.score)
+    //   .sort((a, b) => b - a) // 두개가 전달되는데, b-a처럼하면 내림차순
+    //   .join("-"); // 문자열로
+    // console.log(result);
 
 }

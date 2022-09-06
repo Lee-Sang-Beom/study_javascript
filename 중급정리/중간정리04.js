@@ -3,8 +3,10 @@
 let desc = 'ABCDEFG'
 console.log(desc.length);
 console.log(desc.slice(0,3));
+console.log(desc)
 console.log(desc.slice(4)); // 이건 인덱스 4부터 출력
 console.log(desc.substring(1,3));  // slice, substring 모두 각 인덱스 사이 값 반환
+console.log(desc)
 
 console.log(desc.substr(2,3)); // 인덱스 2부터 3개 가져옴
 
