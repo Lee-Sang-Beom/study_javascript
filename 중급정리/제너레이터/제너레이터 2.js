@@ -1,5 +1,3 @@
-
-
 function* fn() {
     console.log(1);
     yield 1;

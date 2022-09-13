@@ -19,7 +19,7 @@ function* fn(){
 
 }
 
-const a= fn();
+const a = fn();
 
 /* 
  제너레이터 객체 a 내에 
@@ -40,6 +40,8 @@ for (let i of a){
 const str="hello";
 
 console.log(str[Symbol.iterator]());
+
+// symbol.iteratro가 반환한 값은 iterator고 이건 for of를 돌면서 next() 호출
 const xx = str[Symbol.iterator]();
 
 for (let i of xx){
