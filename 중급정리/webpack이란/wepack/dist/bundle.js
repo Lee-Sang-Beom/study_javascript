@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(300,20,30);const t=document.getElementById("btn_a"),e=document.getElementById("btn_b"),n=document.getElementById("btn_c"),c=document.getElementById("display");t.addEventListener("click",(function(){c.textContent=300})),e.addEventListener("click",(function(){c.textContent=20})),n.addEventListener("click",(function(){c.textContent=30}))})();
