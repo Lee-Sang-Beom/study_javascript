@@ -20,7 +20,7 @@
                     <img src="./1.jpg" alt="img1">
                 </div>
                 <div class="right_box">
-                    <h1 id='title'>Scroll in down</h1>
+                    <h1 class='title_1'>Scroll in down</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor nisl. Nunc hendrerit
                         tempus tortor in imperdiet. Sed maximus neque non euismod lobortis. Class aptent taciti sociosqu
                         ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc a magna a ex vestibulum
@@ -37,7 +37,7 @@
         <section data-scroll>
             <div class="box">
                 <div class="right_box">
-                    <h1 id='title'>Scroll in down</h1>
+                    <h1 class='title_2'>Scroll in down</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor nisl. Nunc hendrerit
                         tempus tortor in imperdiet. Sed maximus neque non euismod lobortis. Class aptent taciti sociosqu
                         ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc a magna a ex vestibulum
@@ -60,7 +60,7 @@
                     <img src="./3.jpg" alt="img1">
                 </div>
                 <div class="right_box">
-                    <h1 id='title'>Scroll in down</h1>
+                    <h1 class='title_3'>Scroll in down</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor nisl. Nunc hendrerit
                         tempus tortor in imperdiet. Sed maximus neque non euismod lobortis. Class aptent taciti sociosqu
                         ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc a magna a ex vestibulum
@@ -77,7 +77,7 @@
         <section data-scroll>
             <div class="box">
                 <div class="right_box">
-                    <h1 id='title'>Scroll in down</h1>
+                    <h1 class='title_4'>Scroll in down</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor nisl. Nunc hendrerit
                         tempus tortor in imperdiet. Sed maximus neque non euismod lobortis. Class aptent taciti sociosqu
                         ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc a magna a ex vestibulum
@@ -100,7 +100,7 @@
                     <img src="./5.jpg" alt="img1">
                 </div>
                 <div class="right_box">
-                    <h1 id="title">Scroll in down</h1>
+                    <h1 class="title_5">Scroll in down</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut dolor nisl. Nunc hendrerit
                         tempus tortor in imperdiet. Sed maximus neque non euismod lobortis. Class aptent taciti sociosqu
                         ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc a magna a ex vestibulum
@@ -116,18 +116,56 @@
 
     <!-- 마지막에 ScrollOut({}) 함수 추가 -->
     <script>
+
+        let title1 =document.querySelector('.title_1');
+        let title2 =document.querySelector('.title_2');
+        let title3 =document.querySelector('.title_3');
+        let title4 =document.querySelector('.title_4');
+        let title5 =document.querySelector('.title_5');
+
         ScrollOut({
             // scroll이벤트가 딱 1번만 애니메이션
             // once:true 
 
             // 요소가 보여질 때 어떻게?
-            onshown: (element) => {
-                new TypeIt(element.getElementById('title'), {
-                    cursor: false,
-                    speed: 150,
-                }).pause(2000).go();
-            }
+            // onshown: function(element) {
+            
+            // }
         })
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new TypeIt(title1,{
+                speed:110,
+                loop: true, // 반복함
+            })
+            .go();
+
+            new TypeIt(title2,{
+                speed:110,
+                loop: true, // 반복함
+            })
+            .go();
+
+            new TypeIt(title3,{
+                speed:110,
+                loop: true, // 반복함
+            })
+            .go();
+
+            new TypeIt(title4,{
+                speed:110,
+                loop: true, // 반복함
+            })
+            .go();
+
+            new TypeIt(title5,{
+                speed:110,
+                loop: true, // 반복함
+            })
+            .go();
+        })
+
+
     </script>
 </body>
 
