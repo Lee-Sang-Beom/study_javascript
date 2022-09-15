@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+// 기본적으로 data-scroll이 있는 곳의 속성 지정
+[data-scroll] {
+    opacity: 0;
+    will-change: transform, scale, opacity;
+    transform: translateY(5rem) scale(0.8);
+    transition: all 1.5s ease-in-out;
+}
+
+// data-scroll이 진입되었을 때 : 섹션이 사용자에게 보여질때
+[data-scroll="in"] {
+    opacity: 1;
+    transform: translateY(0) scale(1); // y축 5rem위치에 요소가 있다가, 0rem으로 이동함
+}
+
+// data-scroll에서 나가질 때 : 섹션이 사용자에게 보여지지 않을 때
+[data-scroll="out"] {
+    opacity: 0;
+    transform: translateY(-5rem) scale(0.8);
+}
+
+body{
+    background-color: #000;
+}
+.site-wrap{
+    section{
+        margin-top : 5rem;
+        background-color: black;
+        padding: 3.7rem 0 ;
+        height:50%;
+        .box{
+            margin: 0 auto;
+            display:flex;
+            flex-direction: row;
+            width: 80%;
+            align-items: center;
+            justify-content: space-around;
+            .left_box{
+                width: 40%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .right_box{
+                border : 0.5rem solid skyblue;
+                border-radius: 10px;
+                box-shadow: 5px 5px 1px rgba(255, 255, 255, 0.2);
+                padding: 10px;
+                background-color: aliceblue;
+                width: 40%;
+                h1{
+                    font-size:1.2rem;
+                }
+
+                p{
+                    font-size:0.8rem;
+                }
+            }
+
+        }
+    }
+}
