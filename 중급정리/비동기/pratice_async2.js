@@ -58,7 +58,7 @@
     // }
 
     function normalFun(){
-        return 'wow';
+        // return 'wow';
     }
     async function myAsync(){
         // await: promise가 resolve될때까지 다음줄로 이동하지 않는다.
@@ -75,8 +75,8 @@
 
         // await 뒤에 promise를 리턴하는 함수가 아니어도 그냥 사용가능함
         // 이때는 await가 있더라도, 없더라도 같은결과임
-        // const result = await normalFun();
-        // console.log(result);
+        const result = await normalFun();
+        console.log(result);
 
         return 'async'; 
     }
