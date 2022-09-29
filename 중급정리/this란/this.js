@@ -40,68 +40,68 @@
 
 // 이전까지 함수는 어떻게 호출되는지에 따라 자신의 this값을 정의했음
 // 화살표함수는 자신을 포함하는 외부 스코프에서 this를 계승받는다.
-{
-    let person1={
-        name:'홍길동',
-        age:20,
-        hello: function(){
-            setTimeout(()=>{
+// {
+//     let person1={
+//         name:'홍길동',
+//         age:20,
+//         hello: function(){
+//             setTimeout(()=>{
 
-                // 이 화살표함수를 포함하는 상위스코프 fhello:function(){ 여기 }의 this를 물려받음
-                console.log(this);
-                console.log(this.name);
-                console.log(this.age); 
-            },1000);
-        }
-    }
+//                 // 이 화살표함수를 포함하는 상위스코프 fhello:function(){ 여기 }의 this를 물려받음
+//                 console.log(this);
+//                 console.log(this.name);
+//                 console.log(this.age); 
+//             },1000);
+//         }
+//     }
     
-    person1.hello();
-}
+//     person1.hello();
+// }
 
-// strict 모드 (엄격모드) : 호출한 놈이 없을경우 기본값을 window로 하지않고 undefined로함
-{
-    // use strict;
-    console.log(this);
-}
+// // strict 모드 (엄격모드) : 호출한 놈이 없을경우 기본값을 window로 하지않고 undefined로함
+// {
+//     // use strict;
+//     console.log(this);
+// }
 
 
 
 // 화살표 함수를 사용하면 안되는경우
 // 1. 객체 메서드를 선언할때 사용하면 안됨
-{
-    let person1 = {
-        name: 'John',
-        printThis:()=>{
-            // 화살표 함수는 상위 스코프의 this를 참조하므로, 이 경우 window가됨
-            console.log(this);
-        }
-    }
+// {
+//     let person1 = {
+//         name: 'John',
+//         printThis:()=>{
+//             // 화살표 함수는 상위 스코프의 this를 참조하므로, 이 경우 window가됨
+//             console.log(this);
+//         }
+//     }
 
-    let person2 = {
-        name: 'John',
-        printThis:function(){
-            // 이 함수선언문은 this가 정상적으로 person2 : {name: 'John', printThis: ƒ}
-            console.log(this);
-        }
-    }
+//     let person2 = {
+//         name: 'John',
+//         printThis:function(){
+//             // 이 함수선언문은 this가 정상적으로 person2 : {name: 'John', printThis: ƒ}
+//             console.log(this);
+//         }
+//     }
 
-    person1.printThis();
-    person2.printThis();
-}
+//     person1.printThis();
+//     person2.printThis();
+// }
 
 // 화살표 함수를 사용하면 안되는경우
 // 2. addEventListener 함수의 콜백함수에서 사용하면, this가 상위 컨텍스트를 가리ㅣㅋㅁ
 
-{
-    // ex)
-    let btn = document.querySelector('button');
-    button.addEventListener('click',()=>{
-        console.log(this === window); // true > 상위스코프이므로 btn에서, window로 this가 한칸 상위!
-        this.innerHTML = "CLICK"; // 불가!
-    });
+// {
+//     // ex)
+//     let btn = document.querySelector('button');
+//     button.addEventListener('click',()=>{
+//         console.log(this === window); // true > 상위스코프이므로 btn에서, window로 this가 한칸 상위!
+//         this.innerHTML = "CLICK"; // 불가!
+//     });
 
-    button.addEventListener('click',function(){
-        console.log(this === window); // false > 정상적으로 해당 스코프에서 this를 가져오니 btn!
-        this.innerHTML = "CLICK"; // 가능!
-    });
-}
+//     button.addEventListener('click',function(){
+//         console.log(this === window); // false > 정상적으로 해당 스코프에서 this를 가져오니 btn!
+//         this.innerHTML = "CLICK"; // 가능!
+//     });
+// }

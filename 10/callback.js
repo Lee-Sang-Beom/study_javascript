@@ -1,7 +1,7 @@
 'use strict';
 
 // 1. JavaScript is synchronous (동기적인 아이)
-// 코드가 oisting 된 이후부터 나타나는 순서 그대로 동기적으로 시행
+// 코드가 hoisting 된 이후부터 나타나는 순서 그대로 동기적으로 시행
 // hoisting : var, function의 선언들이 제일 위로 올라가는 것
 
 // function _4()
