@@ -1,4 +1,8 @@
 {
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+      },
     "devDependencies": {
         "@babel/core": "^7.19.3",
         "@babel/polyfill": "^7.12.1",

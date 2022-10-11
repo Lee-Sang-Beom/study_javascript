@@ -219,3 +219,51 @@ module: {
 ```
 .\node_modules\.bin\webpack --mode=development
 ```
+
+### 12. TIP
+ - 매번 명령어를 길게 쳐서, webpack 실행 시 생산성이 떨어질 수 있다. 그래서 아래와 같은 방법을 사용할 수 있다.
+    
+    #### 1) webpack.config.js에 mode추가
+    ```
+    module.exports = {
+    mode: "development", // 추가 (or production)
+    context: __dirname,
+    entry: "./src/app.js",
+    output: {
+        path: path.resolve(__dirname, "js"),
+        filename: "app.js",
+    },
+    module: {
+        rules: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: "babel-loader",
+        },
+        ],
+    },
+    };
+    ```  
+
+    #### 2) package.json에 script추가
+     - npm run build로, 간단하게 webpack을 실행하기 위함이다.
+     - 정상 설치 과정을 따라오면, 입력 결과는 아래와 같다
+    ```
+    {
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+      },
+    "devDependencies": {
+        "@babel/core": "^7.19.3",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.19.4",
+        "babel-loader": "^8.2.5",
+        "path": "^0.12.7",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0"
+    }
+    }
+    ``` 
+
+    #### 3) npm run build로 webpack 실행

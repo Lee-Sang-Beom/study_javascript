@@ -1,12 +1,12 @@
 import "@babel/polyfill";
 
 const arrow = () => {
-    console.log('arrow func');
+    console.log('arrow func!!');
 }
 arrow();
 
 const a = new Promise((resolve, reject)=>{
-    resolve('good');
+    resolve('we are babel!');
 });
 
 console.log(a);
