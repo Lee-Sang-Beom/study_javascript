@@ -1,19 +1,18 @@
 function* fn() {
-    console.log(1);
+    console.log(11);
     yield 1;
-    console.log(2);
+    console.log(22);
     yield 2;
-    console.log(3);
-    console.log(4);
+    console.log(33);
+    console.log(44);
     yield 3;
-    console.log(5);
+    console.log(55);
 
     return "finish!!";
 }
 
 
 const a = fn(); 
-
 
 console.log(a.next());
 console.log(a.next());

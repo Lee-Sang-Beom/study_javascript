@@ -38,7 +38,7 @@ eval("\n\n__webpack_require__(/*! core-js/es6 */ \"./node_modules/core-js/es6/in
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/polyfill */ \"./node_modules/@babel/polyfill/lib/index.js\");\n/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_polyfill__WEBPACK_IMPORTED_MODULE_0__);\n\nvar arrow = function arrow() {\n  console.log('arrow func!!');\n};\narrow();\nvar a = new Promise(function (resolve, reject) {\n  resolve('we are babel!');\n});\nconsole.log(a);\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/polyfill */ \"./node_modules/@babel/polyfill/lib/index.js\");\n/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_polyfill__WEBPACK_IMPORTED_MODULE_0__);\n\nvar a = new Promise(function (resolve, reject) {\n  resolve('wow!');\n});\nconsole.log(a);\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
