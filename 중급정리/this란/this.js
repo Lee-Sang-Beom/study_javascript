@@ -138,16 +138,16 @@
     boundSay("busan");
   }
   
-  // {
-  //   const obj = { name: "tom" };
+  {
+    const obj = { name: "tom" };
   
-  //   function foo(a, b, c) {
-  //     console.log(a + b + c);
-  //     console.log(this);
-  //   };
+    function foo(a, b, c) {
+      console.log(a + b + c);
+      console.log(this);
+    };
     
-  //   foo(1, 2, 3); // 6
-  //   foo.call(obj, 1, 2, 3); // 6
-  //   foo.apply(obj, [1, 2, 3]); // 6
-  // }
+    foo(1, 2, 3); // 6
+    foo.call(obj, 1, 2, 3); // 6
+    foo.apply(obj, [1, 2, 3]); // 6
+  }
   

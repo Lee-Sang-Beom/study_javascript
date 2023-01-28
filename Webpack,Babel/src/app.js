@@ -1,7 +1,4 @@
 import "@babel/polyfill";
 
-const a = new Promise((resolve, reject)=>{
-    resolve('wow!');
-});
-
+let a = 33;
 console.log(a);

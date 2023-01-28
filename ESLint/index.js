@@ -1,4 +1,4 @@
 const number = 13;
-let number2 = 10;
-console.log(number2++);
-console.log(number2);
+const num = 1;
+
+console.log(number, num);
